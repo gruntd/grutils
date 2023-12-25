@@ -37,5 +37,12 @@
                         :loop-vids t
                         :vid-dir "/home/jost/grutils/stream/player/vids/bgs/"))
 
+;; Probably want to add support for https://github.com/hoyon/mpv-mpris
+;; So we can maybe pause, skip, etc remotely from playerctl.
+;; -- maybe we could do also something close to the following:
 
+;; mpv/ctrl-play
+;; mpv/ctrl-hold
+;; mpv/ctrl-skip 
 
+;; etc, etc.
