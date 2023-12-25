@@ -1,4 +1,4 @@
-(defun run-mpv (&rest option-plists)
+(defun mpv/run (&rest option-plists)
   "Runs instances of the mpv command with configurable options, concurrently."
   (dolist (options option-plists)
     (sb-thread:make-thread
@@ -23,7 +23,7 @@
          (uiop:run-program command :output t :wait nil))))))
 
 
-(run-mpv '(:window-title "GRUTILS-STREAM-STARTUP"
+(mpv/run '(:window-title "GRUTILS-STREAM-STARTUP"
                         :dimensions "1920x1080"
                         :shuffle t
                         :fullscreen t
@@ -36,3 +36,6 @@
                         :mute-vids t
                         :loop-vids t
                         :vid-dir "/home/jost/grutils/stream/player/vids/bgs/"))
+
+
+
